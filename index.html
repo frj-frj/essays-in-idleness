@@ -1,0 +1,21 @@
+---
+layout: default
+title: Essays in Idleness
+---
+
+<div class="home">
+  <h1 class="page-title">Posts</h1>
+  
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <a href="{{ post.url | relative_url }}" class="post-link">
+          {% if post.title != "" %}{{ post.title }}{% else %}Fragment{% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">subscribe via RSS</a></p>
+</div>
