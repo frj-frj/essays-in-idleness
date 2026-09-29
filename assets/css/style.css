@@ -8,15 +8,18 @@ body {
   line-height: 1.7 !important;
 }
 
-.site-header, .site-footer, .page-content, .post, .home .post-list-item {
-  max-width: 620px !important;
+.site-header, .site-footer, .page-content, .post, .home .post-list-item, .home > div {
+  max-width: 720px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'EB Garamond', serif !important;
   font-weight: 600 !important;
+  text-align: center !important;
 }
 
 a {
@@ -38,4 +41,36 @@ body::before {
   opacity: 0.06;
   pointer-events: none;
   z-index: -1;
+}
+
+/* Fragment numeral styling (centered, smaller) */
+.fragment-marker {
+  display: block;
+  text-align: center !important;
+  font-size: 1.8em !important;
+  margin: 1.5em 0 0.5em !important;
+  font-family: 'EB Garamond', serif !important;
+  font-weight: 600 !important;
+}
+
+/* Home page container centering */
+.home {
+  text-align: center !important;
+}
+
+/* Fragment text stays left-aligned */
+.home section:last-of-type {
+  text-align: left !important;
+}
+
+/* Index page list items centered */
+.home ul {
+  text-align: center !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+.home li {
+  text-align: center !important;
+  margin: 2em 0 !important;
 }

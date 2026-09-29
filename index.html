@@ -1,21 +1,23 @@
 ---
 layout: default
-title: Essays in Idleness
+title: LEAFS
 ---
 
 <div class="home">
-  <h1 class="page-title">Posts</h1>
+  <h1>LEAFS</h1>
   
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-        <a href="{{ post.url | relative_url }}" class="post-link">
-          {% if post.title != "" %}{{ post.title }}{% else %}Fragment{% endif %}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div style="margin:2em 0;">
+    <p style="font-style:italic; margin:1em 0;"><a href="/index-page.html" style="color:#222; text-decoration:none;">- index -</a></p>
+  </div>
   
-  <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">subscribe via RSS</a></p>
+  <!-- All fragments in continuous scroll -->
+  {% for post in site.posts %}
+    <div id="fragment-{{ forloop.index }}" style="padding-top:3em;">
+      <section class="fragment-marker">{{ forloop.index | to_roman }}</section>
+      
+      <section style="margin:1em 0 3em; line-height:1.6;">
+        {{ post.content }}
+      </section>
+    </div>
+  {% endfor %}
 </div>
