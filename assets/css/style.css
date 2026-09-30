@@ -1,29 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
 body {
-  font-family: 'EB Garamond', serif !important;
-  background-color: #fcfbf8 !important;
-  color: #222 !important;
-  font-size: 18px !important;
-  line-height: 1.7 !important;
+  font-family: 'Libre Caslon Text', serif !important;
+  background-color: #f3f0e8 !important;
+  color: #000000 !important;
+  font-size: 24px !important;
+  line-height: 1.8 !important;
 }
 
 .site-header, .site-footer, .page-content, .post, .home .post-list-item, .home > div {
   max-width: 720px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'EB Garamond', serif !important;
+  font-family: 'Libre Caslon Text', serif !important;
   font-weight: 600 !important;
   text-align: center !important;
 }
 
 a {
-  color: #222 !important;
+  color: #1a1a1a !important;
   text-decoration: none;
   border-bottom: 1px solid #ccc;
 }
@@ -37,33 +37,54 @@ body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  opacity: 0.06;
+  background-image: url('/assets/paper_texture_small.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 1 !important;
   pointer-events: none;
   z-index: -1;
 }
 
-/* Fragment numeral styling (centered, smaller) */
+/* Fragment numeral styling */
 .fragment-marker {
   display: block;
   text-align: center !important;
-  font-size: 1.8em !important;
-  margin: 1.5em 0 0.5em !important;
-  font-family: 'EB Garamond', serif !important;
+  font-size: 2em !important;
+  margin: 2em 0 1em !important;
+  font-family: 'Libre Caslon Text', serif !important;
   font-weight: 600 !important;
 }
 
-/* Home page container centering */
+/* Home page container */
 .home {
   text-align: center !important;
 }
 
-/* Fragment text stays left-aligned */
+/* JUSTIFIED TEXT—book weight */
 .home section:last-of-type {
-  text-align: left !important;
+  text-align: justify !important;
+  font-weight: 550 !important;
+  color: #0d0d0d !important;
+  text-shadow: 0 0.5px 0 rgba(0,0,0,0.15) !important;
+  hyphens: auto !important;
+  letter-spacing: -0.3px !important; 
+  -webkit-hyphens: auto !important;
+  -moz-hyphens: auto !important;
+  -ms-hyphens: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
-/* Index page list items centered */
+/* Paragraph spacing */
+.home section:last-of-type p {
+  margin: 2em 0 !important;
+}
+
+.home section:last-of-type p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* Index page */
 .home ul {
   text-align: center !important;
   list-style: none !important;
