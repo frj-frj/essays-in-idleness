@@ -63,11 +63,11 @@ body::before {
 /* JUSTIFIED TEXT—book weight */
 .home section:last-of-type {
   text-align: justify !important;
-  font-weight: 550 !important;
+  font-weight: 570 !important;
   color: #0d0d0d !important;
   text-shadow: 0 0.5px 0 rgba(0,0,0,0.15) !important;
   hyphens: auto !important;
-  letter-spacing: -0.3px !important; 
+  letter-spacing: -0.5px !important; 
   -webkit-hyphens: auto !important;
   -moz-hyphens: auto !important;
   -ms-hyphens: auto !important;

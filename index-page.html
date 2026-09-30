@@ -11,7 +11,7 @@ title: LEAFS - Index
   </div>
   
   <ul style="list-style:none; padding:0; margin:2em auto; max-width:500px; text-align:center;">
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
       <li style="margin:2em 0;">
         <span style="font-size:2em; font-weight:600; display:block; margin-bottom:0.5em;">
           {{ forloop.index | to_roman }}
