@@ -35,11 +35,13 @@ a:hover {
 /* Paper texture overlay */
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
+  min-height: 200vh;
   background-image: url('/assets/paper_texture_small.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: auto;
+  background-repeat: repeat-y;
+  background-position: center top;
   opacity: 1 !important;
   pointer-events: none;
   z-index: -1;
@@ -49,10 +51,12 @@ body::before {
 .fragment-marker {
   display: block;
   text-align: center !important;
-  font-size: 2em !important;
-  margin: 2em 0 1em !important;
+  font-size: 1em !important;
+  margin: 2em 0 -1em !important;
   font-family: 'Libre Caslon Text', serif !important;
-  font-weight: 600 !important;
+  font-weight: 300 !important;
+  transform: scaleX(1.7);      /* Stretch 20% wider */
+  transform-origin: center;    /* Keep centered */
 }
 
 /* Home page container */
